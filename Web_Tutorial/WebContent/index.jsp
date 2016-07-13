@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Hi there, ready for some fun ?</title>
+<title>Hi there, ready for some fun ? We are using git here !!</title>
 </head>
 <body>
 
