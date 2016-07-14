@@ -18,7 +18,7 @@
 out.println("Entering Try block !!");
 try{
 	out.println("Registering Driver !!");
-	Class.forName("org.mysql.jdbc.Driver");
+	Class.forName("com.mysql.jdbc.Driver");
 	Connection conn = null;
 	out.println("Getting the connection");
 	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/TEST","nikhil", "nikhilmone");
