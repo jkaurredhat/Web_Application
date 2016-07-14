@@ -1,4 +1,5 @@
-You can either login to OpenShift Management Console and then navigate to the mysql pd and then click on `terminal` tab and run below commands :
+You can either login to OpenShift Management Console and then navigate to the mysql pd and then click on `terminal` tab
+and run below commands :
 
 ```
 $ mysql -u nikhil -h 127.0.0.1 -p
@@ -15,4 +16,5 @@ $ mysql -u nikhil -h 127.0.0.1 -p
 > INSERT INTO employee VALUES (103, 36, 'Prabhat', 'Kumar');
 ```
 
-You can also use port forward database IP:PORT to your local machine and use MySQL Workbench or command line to create table and insert data.
+You can also use port forward database IP:PORT to your local machine and use MySQL Workbench or command line to create 
+table and insert data.
