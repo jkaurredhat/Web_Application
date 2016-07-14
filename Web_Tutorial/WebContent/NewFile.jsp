@@ -15,8 +15,10 @@
 </head>
 
 <%
+out.println("Entering Try block !!");
 try{
-	Class.forName("org.mysql.Driver");
+	out.println("Registering Driver !!");
+	Class.forName("org.mysql.jdbc.Driver");
 	Connection conn = null;
 	out.println("Getting the connection");
 	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/TEST","nikhil", "nikhilmone");
@@ -29,6 +31,7 @@ try{
 	conn.close();
 	out.println("Closed the connection");
 }catch(Exception ex){
+	out.println("Entering Catch block !!");
 	out.println(ex.getMessage());
 }
 %>
