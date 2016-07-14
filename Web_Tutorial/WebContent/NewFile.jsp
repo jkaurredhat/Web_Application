@@ -21,7 +21,8 @@ try{
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection conn = null;
 	out.println("Getting the connection");
-	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/TEST","nikhil", "nikhilmone");
+	//conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/TEST","nikhil", "nikhilmone");
+	conn = DriverManager.getConnection("jdbc:mysql://mysqlservice/TEST","nikhil", "nikhilmone");
 	out.println("Got the connection");
 	Statement stmt = conn.createStatement();
 	ResultSet rs = stmt.executeQuery("select * from employee");
