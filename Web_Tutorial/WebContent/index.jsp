@@ -7,6 +7,6 @@
 <title>Hi there, ready for some fun ? We are using git here !!</title>
 </head>
 <body>
-
+<h1>Hi this is index page !!</h1>
 </body>
 </html>
