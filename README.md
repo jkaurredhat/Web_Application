@@ -56,4 +56,4 @@ Closed the connection
 </html>
 ```
 
-P.S. : Do not forget to create TABLE and Insert few values prior testing the app :D
+P.S. : Do not forget to create TABLE and Insert few values prior testing the app, [from here](Web_Tutorial/myDB.txt)
