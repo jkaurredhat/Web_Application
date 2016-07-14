@@ -1,0 +1,20 @@
+mysql -u nikhil -h 127.0.0.1 -p
+> use TEST;
+> create table employee
+    (
+     id int not null,
+     age int not null,
+     first varchar (255),
+     last varchar (255)
+    );
+> INSERT INTO Employees VALUES (101, 28, 'Nikhil', 'Mone');
+> INSERT INTO Employees VALUES (102, 35, 'Amit', 'Sharma');
+> INSERT INTO Employees VALUES (103, 36, 'Prabhat', 'Kumar');
+
+
+DB7APP_MYSQL_PORT_3306_TCP_ADDR=172.30.173.39
+
+DB7APP_MYSQL_SERVICE_HOST=172.30.173.39                                         
+DB7APP_MYSQL_SERVICE_PORT=3306
+
+"${myEnvironment.machineName}"

@@ -1,3 +1,6 @@
+<%@page import="javax.naming.InitialContext"%>
+<%@page import="javax.naming.Context"%>
+<%@page import="javax.sql.DataSource"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.DriverManager"%>
@@ -22,7 +25,10 @@ try{
 	Connection conn = null;
 	out.println("Getting the connection");
 	//conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/TEST","nikhil", "nikhilmone");
-	conn = DriverManager.getConnection("jdbc:mysql://mysqlservice/TEST","nikhil", "nikhilmone");
+	//conn = DriverManager.getConnection("jdbc:mysql://mysqlservice/TEST","nikhil", "nikhilmone");
+	Context ctx = new InitialContext();
+	DataSource ds = (DataSource) ctx.lookup("java:jboss/datasources/myDS");
+	conn = ds.getConnection();
 	out.println("Got the connection");
 	Statement stmt = conn.createStatement();
 	ResultSet rs = stmt.executeQuery("select * from employee");
