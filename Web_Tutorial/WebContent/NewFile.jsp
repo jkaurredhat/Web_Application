@@ -24,12 +24,24 @@ try{
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection conn = null;
 	out.println("Getting the connection");
+
+
+         String host = (System.getenv("MYSQL_SERVICE_HOST") == null) ? "127.0.0.1" : System.getenv("MYSQL_SERVICE_HOST");
+         String port = (System.getenv("MYSQL_SERVICE_PORT") == null) ? "27017" : System.getenv("MYSQL_SERVICE_PORT");
+         String username = (System.getenv("MYSQL_USER")== null) ? "mlbparks" : System.getenv("MYSQL_USER");
+         String password = (System.getenv("MYSQL_PASSWORD") == null) ? "mlbparks" : System.getenv("MYSQL_PASSWORD");
+         String DBName = (System.getenv("MYSQL_DATABASE") == null) ? "mlbparks" : System.getenv("MYSQL_DATABASE");i
+
+         String url = String.format(":mysql://%s:%s/jbossas", host, port);
+         Connection conn = DriverManager.getConnection(url, username, password);
+         
+
 	//conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/TEST","nikhil", "nikhilmone");
 	//conn = DriverManager.getConnection("jdbc:mysql://mysqlservice/TEST","nikhil", "nikhilmone");
-	Context ctx = new InitialContext();
-	DataSource ds = (DataSource) ctx.lookup("java:jboss/datasources/myDS");
-	conn = ds.getConnection();
-	out.println("Got the connection");
+	//Context ctx = new InitialContext();
+	//DataSource ds = (DataSource) ctx.lookup("java:jboss/datasources/myDS");
+	//conn = ds.getConnection();
+	out.println("Got the connection" + conn.getClass().getName());
 	Statement stmt = conn.createStatement();
 	ResultSet rs = stmt.executeQuery("select * from employee");
 	while(rs.next()){
